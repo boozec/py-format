@@ -28,5 +28,5 @@ remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITO
 git config --global user.email "dcariotti24@gmail.com"
 git config --global user.name "Santo Cariotti"
 black .;
-git commit -am "black format"
-git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION $_TAGS;
+git diff-index --quiet HEAD || git commit -am "black format"
+git diff-index --quiet HEAD || git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION $_TAGS;
