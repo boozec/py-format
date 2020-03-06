@@ -25,6 +25,7 @@ fi
 cd ${INPUT_DIRECTORY}
 
 remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
-
-git commit -am "black format";
+git config --global user.email "dcariotti24@gmail.com"
+git config --global user.name "Santo Cariotti"
+git commit -am "black format"
 git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION $_TAGS;
