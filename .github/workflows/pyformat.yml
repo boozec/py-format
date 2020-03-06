@@ -23,4 +23,10 @@ jobs:
     - name: Install Black
       run: |
         pip install black
-        black .
+        black 
+
+    - name: Verify action
+      uses: './'
+      with:
+        github_token: '${{ secrets.GITHUB_TOKEN }}'
+        branch: '${{ github.ref }}'
