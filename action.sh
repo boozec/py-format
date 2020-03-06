@@ -29,4 +29,4 @@ git config --global user.email "dcariotti24@gmail.com"
 git config --global user.name "Santo Cariotti"
 black .;
 git diff-index --quiet HEAD || git commit -am "black format"
-git diff-index --quiet HEAD || git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION $_TAGS;
+git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION $_TAGS;
