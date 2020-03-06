@@ -1,6 +1,5 @@
 
 
-
 class ModelForm ( object):
     def __init__(   self, model):
         self.data =  {}
